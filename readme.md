@@ -68,6 +68,7 @@ const node = h('div.test', { id: 'some-id'}, 'Hello World!')
 
 ## Implementations
 
+* [preact-hyperscript](https://github.com/queckezz/preact-hyperscript) - For [Preact](https://github.com/developit/preact)
 * [create-dom-tree](https://github.com/queckezz/create-dom-tree) - Create a DOM tree with ease
 
 [→ Add your implementation](https://github.com/queckezz/parse-hyperscript/pulls/new)
