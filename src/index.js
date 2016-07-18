@@ -29,7 +29,7 @@ function parse (args) {
   classes && (attrs.class = classes)
 
   return {
-    tag: selector.tag,
+    node: selector.tag,
     attrs,
     children
   }

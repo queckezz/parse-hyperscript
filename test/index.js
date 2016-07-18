@@ -7,7 +7,7 @@ const parse = require('..')
 test('parse selector', (t) => {
   const obj = parse(['span#some-id.bold.italic'])
 
-  t.equal(obj.tag, 'span', 'parses the node name')
+  t.equal(obj.node, 'span', 'parses the node name')
   t.equal(obj.attrs.id, 'some-id', 'parses an id')
   t.equal(obj.attrs.class, 'bold italic', 'parses class names')
   t.equal(obj.children.length, 0, 'no children')
@@ -29,9 +29,9 @@ test('children', (t) => {
 
   t.deepEqual(
     parse(['p', [
-      { tag: 'div' }
+      { node: 'div' }
     ]]).children[0],
-    { tag: 'div' },
+    { node: 'div' },
     'parses array contents as children'
   )
 
@@ -64,16 +64,16 @@ test('classnames', (t) => {
 
 test('react', (t) => {
   function h () {
-    const { tag, attrs, children } = parse(arguments)
+    const { node, attrs, children } = parse(arguments)
     return createElement(
-      tag,
+      node,
       renameKey('class', 'className', attrs),
       ...children
     )
   }
 
   const node = h('div.test', { id: 'some-id' }, 'Hello World!')
-  t.true(contains(renderToString(node), 'div'), 'renders the right tag')
+  t.true(contains(renderToString(node), 'div'), 'renders the right node')
   t.true(contains(renderToString(node), 'class="test"'), 'contains class')
   t.true(contains(renderToString(node), 'id="some-id"'), 'contains props')
   t.true(contains(renderToString(node), 'Hello World!'), 'contains children')
