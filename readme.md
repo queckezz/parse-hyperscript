@@ -1,7 +1,7 @@
 
 # parse-hyperscript
 
-> Parse hyperscript-like syntax for creating dom or virtual-dom nodes.
+> Parse hyperscript-like syntax for creating dom or virtual-dom elements.
 
 This layer exists to build a hyperscript-like DSL for any kind of dom/virtual-dom creation library.
 
@@ -63,7 +63,6 @@ function h () {
 
 const node = h('div.test', { id: 'some-id'}, 'Hello World!')
 // -> ReactElement
-
 ```
 
 ## Implementations

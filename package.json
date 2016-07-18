@@ -1,7 +1,7 @@
 {
   "name": "parse-hyperscript",
   "version": "0.1.0",
-  "description": "Parse hyperscript-like syntax for creating dom or virtual-dom nodes",
+  "description": "Parse hyperscript-like syntax for creating dom or virtual-dom elements",
   "main": "src/index.js",
   "scripts": {
     "test:node": "tape test/*.js | tap-spec",
