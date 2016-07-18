@@ -1,6 +1,6 @@
 {
   "name": "parse-hyperscript",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Parse hyperscript-like syntax for creating dom or virtual-dom nodes",
   "main": "src/index.js",
   "scripts": {
