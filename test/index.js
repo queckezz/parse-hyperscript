@@ -1,6 +1,6 @@
 
+const { createElement, createClass } = require('react')
 const { renderToString } = require('react-dom/server')
-const { createElement } = require('react')
 const test = require('tape')
 const parse = require('..')
 
@@ -51,6 +51,27 @@ test('attributes', (t) => {
     ),
     ['id', 'style'],
     'multiple attributes'
+  )
+
+  t.end()
+})
+
+test('different nodes than default tags', (t) => {
+  const functionalComponent = (props) => null
+
+  const component = createClass({
+    render: () => createElement('p', null, 'Hello')
+  })
+
+  t.equal(
+    typeof parse([functionalComponent]).node,
+    'function',
+    'should be a functional component'
+  )
+
+  t.true(
+    parse([component]).node.prototype.isReactComponent !== null,
+    'should be a react component'
   )
 
   t.end()
