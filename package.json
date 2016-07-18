@@ -1,0 +1,30 @@
+{
+  "name": "parse-hyperscript",
+  "version": "0.0.1",
+  "description": "Parse hyperscript-like syntax for creating dom or virtual-dom nodes",
+  "main": "src/index.js",
+  "scripts": {
+    "test:node": "tape test/*.js | tap-spec",
+    "test:lint": "snazzy",
+    "test": "npm-run-all -p test:*"
+  },
+  "keywords": [
+    "hyperscript",
+    "parse",
+    "react",
+    "virtual-dom"
+  ],
+  "author": "Fabian Eichenberger <fabian.eichenberger@gmail.com> (https://github.com/queckezz)",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "devDependencies": {
+    "npm-run-all": "^2.3.0",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "snazzy": "^4.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  }
+}
