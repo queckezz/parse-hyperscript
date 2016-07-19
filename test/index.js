@@ -77,12 +77,6 @@ test('different nodes than default tags', (t) => {
   t.end()
 })
 
-test('classnames', (t) => {
-  const obj = parse(['p', { class: ['one', { 'two': true }] }])
-  t.equal(obj.attrs.class, 'one two')
-  t.end()
-})
-
 test('react', (t) => {
   function h () {
     const { node, attrs, children } = parse(arguments)

@@ -1,6 +1,5 @@
 
 const parseSelector = require('./selector')
-const cn = require('classnames')
 
 module.exports = parse
 
@@ -28,7 +27,6 @@ function parse (args) {
   if (isString(node)) {
     let selector = parseSelector(node)
     selector.id && (attrs.id = selector.id)
-    attrs.class && (attrs.class = cn(attrs.class))
 
     if (selector.classes !== '') {
       if (attrs.class) {

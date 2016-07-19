@@ -23,9 +23,7 @@
   },
   "author": "Fabian Eichenberger <fabian.eichenberger@gmail.com> (https://github.com/queckezz)",
   "license": "MIT",
-  "dependencies": {
-    "classnames": "^2.2.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "buble": "^0.12.5",
     "fastbench": "^1.0.1",
