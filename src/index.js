@@ -28,10 +28,14 @@ function parse (args) {
   if (isString(node)) {
     let selector = parseSelector(node)
     selector.id && (attrs.id = selector.id)
+    attrs.class && (attrs.class = cn(attrs.class))
 
-    if (selector.classes.length !== '') {
-      const classes = cn(attrs.class, selector.classes)
-      attrs.class = classes
+    if (selector.classes !== '') {
+      if (attrs.class) {
+        attrs.class = `${attrs.class} ${selector.classes}`
+      } else {
+        attrs.class = selector.classes
+      }
     }
 
     return { node: selector.tag, attrs, children }
