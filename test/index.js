@@ -2,7 +2,7 @@
 const { createElement, createClass } = require('react')
 const { renderToString } = require('react-dom/server')
 const test = require('tape')
-const parse = require('..')
+const parse = require('../src')
 
 test('parse selector', (t) => {
   const obj = parse(['span#some-id.bold.italic'])
