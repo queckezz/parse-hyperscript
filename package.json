@@ -16,6 +16,10 @@
     "react",
     "virtual-dom"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/queckezz/parse-hyperscript"
+  },
   "author": "Fabian Eichenberger <fabian.eichenberger@gmail.com> (https://github.com/queckezz)",
   "license": "MIT",
   "dependencies": {
