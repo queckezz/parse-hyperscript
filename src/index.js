@@ -29,8 +29,8 @@ function parse (args) {
     let selector = parseSelector(node)
     selector.id && (attrs.id = selector.id)
 
-    if (selector.classes.length !== 0) {
-      const classes = cn(attrs.class, selector.classes.join(' '))
+    if (selector.classes.length !== '') {
+      const classes = cn(attrs.class, selector.classes)
       attrs.class = classes
     }
 
