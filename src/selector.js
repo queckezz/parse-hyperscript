@@ -1,8 +1,10 @@
 
 module.exports = parseSelector
 
+const re = /([\.#]?[^\s#.]+)/
+
 function parseSelector (selector) {
-  const matches = selector.split(/([\.#]?[^\s#.]+)/)
+  const matches = selector.split(re)
   let classes = []
   let id = null
   let tag = null
