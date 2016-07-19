@@ -7,6 +7,8 @@ function parseSelector (selector) {
   let id = null
   let tag = null
 
+  if (matches.length === 3) return { tag: selector, classes }
+
   matches.forEach((match) => {
     const s = match.substring(1, match.length)
     if (!match) return
