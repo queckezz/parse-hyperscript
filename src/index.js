@@ -18,7 +18,7 @@ function parse (args) {
     } else if (isObj(arg)) {
       attrs = arg
     } else {
-      children = [arg]
+      children = [String(arg)]
     }
   }
 

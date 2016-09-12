@@ -27,6 +27,12 @@ test('children', (t) => {
     'parses a string as children'
   )
 
+  t.equal(
+    parse(['p', 42]).children[0],
+    '42',
+    'parses a number as children'
+  )
+
   t.deepEqual(
     parse(['p', [
       { node: 'div' }
